@@ -1,3 +1,27 @@
+/*
+ * File: dlist.c
+ * Description: Implementation of a doubly linked list with basic operations.
+ *
+ * This file defines functions to create, manipulate, and manage a doubly linked list.
+ * The doubly linked list supports the following operations:
+ * - Creating an empty list
+ * - Adding nodes to the head or tail of the list
+ * - Printing the list for debugging
+ * - Freeing memory allocated for the list
+ *
+ * Data Structures:
+ * - DList: Represents the doubly linked list, containing pointers to the head and tail nodes.
+ * - Node: Represents a node in the list, containing data and pointers to the previous and next nodes.
+ *
+ * Functions:
+ * - DList* create_empty_list(): Creates an empty doubly linked list.
+ * - Node* create_node(int data): Creates a new node with the specified data.
+ * - void insert_at_head(DList **list, Node *new_node): Inserts a new node at the head of the list.
+ * - void insert_at_tail(DList **list, Node *new_node): Inserts a new node at the tail of the list.
+ * - void print_list(DList *list): Prints the list contents from head to tail.
+ * - void free_list(DList *list): Frees all memory allocated for the list.
+*/
+
 #include <stdio.h>
 #include <stdlib.h>
 #include "dlist.h"

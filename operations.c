@@ -1,3 +1,65 @@
+/*
+ * File: operations.c
+ * Description: Implements arithmetic operations for large numbers represented as
+ *              doubly linked lists, including addition, subtraction, multiplication,
+ *              division, and modulus. The code also includes utility functions for
+ *              comparing and manipulating doubly linked lists.
+ *
+ * Features:
+ * - Addition:
+ *   Calculates the sum of two large numbers and stores the result in a doubly linked list.
+ *
+ * - Subtraction:
+ *   Performs subtraction of two large numbers. Assumes the first number is greater than
+ *   or equal to the second number.
+ *
+ * - Multiplication:
+ *   Multiplies two large numbers using digit-wise multiplication and accumulation,
+ *   storing the result in a doubly linked list.
+ *
+ * - Division:
+ *   Divides two large numbers using repeated subtraction and produces the quotient.
+ *   Handles division by zero with appropriate error messages.
+ *
+ * - Modulus:
+ *   Computes the remainder of the division of two large numbers using repeated subtraction.
+ *
+ * - Comparison:
+ *   Compares two doubly linked lists representing numbers and returns:
+ *     1  -> If the first number is greater.
+ *     -1 -> If the second number is greater.
+ *     0  -> If both numbers are equal.
+ *
+ * Functions:
+ * - int addition(DList **head1, Node *tail1, DList **head2, Node *tail2, DList **headR):
+ *     Adds two numbers and stores the result in `headR`.
+ *
+ * - int subtraction(DList *head1, Node *tail1, DList *head2, Node *tail2, DList **headR):
+ *     Subtracts the second number from the first and stores the result in `headR`.
+ *
+ * - int multiplication(DList *head1, Node *tail1, DList *head2, Node *tail2, DList **headR):
+ *     Multiplies two numbers and stores the result in `headR`.
+ *
+ * - int division(DList *head1, Node *tail1, DList *head2, Node *tail2, DList **headR):
+ *     Divides the first number by the second and stores the quotient in `headR`.
+ *     Returns 0 for division by zero.
+ *
+ * - int modulus(DList *head1, Node *tail1, DList *head2, Node *tail2, DList **headR):
+ *     Calculates the modulus (remainder) of the first number divided by the second
+ *     and stores the result in `headR`. Returns 0 for modulus by zero.
+ *
+ * - int compare_dlists(DList *lst1, DList *lst2):
+ *     Compares two doubly linked lists and returns the comparison result as described above.
+ *
+ * Usage:
+ * - Include this file as part of a larger program for arbitrary precision arithmetic.
+ * - Ensure that the dependent files `dlist.h` and related utility functions are present.
+ *
+ * Dependencies:
+ * - Requires `dlist.h` for doubly linked list definitions and utilities.
+*/
+
+
 #include <stdio.h>
 #include <stdlib.h>
 #include "operations.h"

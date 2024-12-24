@@ -1,3 +1,39 @@
+/*
+ * File: main.c
+ * Description: Arbitrary precision arithmetic application that performs basic
+ *              arithmetic operations (+, -, *, /, %) on two large numbers represented
+ *              using doubly linked lists.
+ *
+ * Features:
+ * - Accepts large numbers and an operator as input (e.g., 123456789+987654321).
+ * - Uses doubly linked lists to represent numbers for efficient manipulation.
+ * - Supports the following operations:
+ *   - Addition (+)
+ *   - Subtraction (-)
+ *   - Multiplication (*)
+ *   - Division (/)
+ *   - Modulus (%)
+ * - Handles user input validation and provides feedback for incorrect formats.
+ * - Allows the user to perform multiple calculations in a single session.
+ * - Frees all dynamically allocated memory to prevent memory leaks.
+ *
+ * Functions:
+ * - void handle_operation(char operator, DList *head1, Node *tail1, DList *head2, Node *tail2, DList **headR):
+ *     Dispatches the appropriate arithmetic operation based on the given operator.
+ * - int main():
+ *     Handles user input, processes operations, displays results, and manages program flow.
+ *
+ * Usage:
+ * - Compile the program with its dependencies (`dlist.h` and `operations.h`).
+ * - Run the executable and enter input in the specified format (e.g., "12345+67890").
+ * - Follow prompts to continue or exit the application.
+ *
+ * Dependencies:
+ * - dlist.h: Provides definitions and functions for managing doubly linked lists.
+ * - operations.h: Contains implementations of arithmetic operations for large numbers.
+*/
+
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
